@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReviewSpoofer", "ReviewSpoofer.csproj", "{D527E416-E83D-4CB7-BBD3-527DF2B3A6F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D527E416-E83D-4CB7-BBD3-527DF2B3A6F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D527E416-E83D-4CB7-BBD3-527DF2B3A6F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D527E416-E83D-4CB7-BBD3-527DF2B3A6F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D527E416-E83D-4CB7-BBD3-527DF2B3A6F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C360B537-F497-41CA-B67E-9D07ACFF9E36}
+	EndGlobalSection
+EndGlobal
