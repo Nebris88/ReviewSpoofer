@@ -54,7 +54,7 @@ namespace ReviewSpoofer.Controllers
             spoof.reviewText = String.Join(" ", _markovSingleton.reviewTextChain.Chain(rand));
 
             //Overall will just be random distribution, but due to rand not making exact max, gonna do a trick to slightly weight to 5.0
-            spoof.overall = Math.Round(Math.Clamp(rand.NextDouble() * 5.1, 0.0, 5.0), 1);
+            spoof.overall = Math.Round(Math.Clamp(rand.NextDouble() * 5.1, 1.0, 5.0), 1);
 
             //Summary is another markov use case.
             spoof.summary = String.Join(" ", _markovSingleton.summaryChain.Chain(rand));
@@ -64,7 +64,7 @@ namespace ReviewSpoofer.Controllers
             int dif = _markovSingleton.largestUnixTime - _markovSingleton.smallestUnixTime;
             spoof.unixReviewTime = (int)(rand.NextDouble() * dif) + _markovSingleton.smallestUnixTime;
 
-            //Convert that date to datetime.  Sample data was formated with trailing zero in month but not day.
+            //Convert that unixdate to datetime.  Sample data was formated with leading zero in month but not day.
             DateTime dateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc);
             dateTime = dateTime.AddSeconds(spoof.unixReviewTime);
             spoof.reviewTime = $"{dateTime.ToString("MM d")}, {dateTime.Year}";
